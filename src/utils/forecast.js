@@ -7,7 +7,7 @@ const forecast = (lat, long, callback) => {
             body.error ?
                 callback('Unable to find that location, please try again', undefined) :
                 callback(undefined, 
-                    `${body.current.weather_descriptions}, ${body.current.temperature} degrees. Feels like ${body.current.feelslike} degrees.`
+                    `${body.current.weather_descriptions}, ${body.current.temperature} degrees. Feels like ${body.current.feelslike} degrees. Humidity is ${body.current.humidity}%.`
                 )
     })
 }
